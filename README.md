@@ -1,0 +1,2 @@
+# yatagarasu
+self repository
