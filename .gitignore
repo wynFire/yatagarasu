@@ -1,3 +1,4 @@
 .project/
 .gradle/
-.setting/
+.settings/
+.classpath/
