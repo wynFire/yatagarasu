@@ -1,0 +1,50 @@
+1.mkdir react-templete-app
+
+2.cd react-templete-app then mkdir dev and mkdir outpur.
+ (
+    1.Inside dev folder,we will place all of our unoptimized and unconverted JSX,JavaScript,and other script-related content. In other words,this is where the code you are writting and actively working on will live.
+    2.Inside our ourtput folder, we will place the result of running our various build tools on the script files found inside the dev floder.This is where Babel will convert all of our JSX files into JS.This is also where webpack will resolv any dependencies between our scipt files and place all of the important script content into a single JavaScript file.
+ )
+
+3. create HTML file inside react-templete-app called index.html
+ (
+    In index.html Our document's body is just an empty div element with an id value of container and a script tag that points to the final JavaScript file called myCode.js that will get gennerated inside the output folder.
+ )
+
+4.Initialize Node.js: 
+  cd react-templete-app then run 'npm init'.answer question to create package.json
+
+5.Installing the React Dependencies: 
+  cd react-templete-app then run 'npm install react react-dom --save'.
+
+6.Adding our JSX file:
+  Inside our dev folder, using the code editor, create a file called index.jsx  
+
+7.Going from JSX to JavaScript:
+  7.1 Setting up webpack : install webpack run 'npm install webpack --save'
+  7.2 add file webpack.config.js inside our react-templete-app.Inside this file,we need specify a bunch of JavaScript properties to define where our original,unmodified source files live and where to output the final source files.
+
+8.Setting up Babel: The last piece in our current setup is to transform our index.jsx file to become regular JavaScript in the form of myCode.js.This is where Babel comes in.
+   8.1 Install Babel : run 'npm install babel-core babel-loader babel-preset-es2015 babel-preset-react --save'
+   8.2 configure Babel to work with our project.
+       8.2.1 specify which Babel presets we want to use.There are several ways of doing this,but my preferred way is to nodify package.json and add the content about babel object.
+       8.2.2 Tell webpack about Babel.In out webpack.config.js file,go ahead and add the module object in config object.We added the module and loaders object that tell webpack to pass the index.jsx file defined in our entry property throuht Babel to turn into JavaScript.With this change,we've pretty much gotten our development environment setup for building a React App.
+
+9.Building and Testing our App: the last step in all of this is building our app and having the end-to-end workflow work.
+   9.1 To build our app : run './node_modules/.bin/webpack'  This command runs webpack and does all the things we've specified in our webpack.config.js and package.json configuration files.
+   9.2 Open your index.html file in your browser.If you venture into the Output folder and look at myCode.js, you'll see a fairly hefty file with a lot of JavaScript made up of the relevant React, ReactDOM, and your app code all organized there.
+
+
+
+
+
+
+
+
+
+
+
+
+ help url:
+ https://www.kirupa.com/react/setting_up_react_environment.htm
+ https://www.npmjs.com/
