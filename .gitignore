@@ -2,3 +2,30 @@
 .gradle/
 .settings/
 .classpath/
+RemoteSystemsTempFiles/
+.metadata/
+
+# Gradle
+**/bin/
+**/build/
+**/.gradle
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Cache of project
+.gradletasknamecache
+
+# Eclipse
+**/.classpath
+**/.project
+**/.settings/
+
+# Intellij
+**/.idea/
+**/*.iml
+**/*.iws
+**/atlassian-ide-plugin.xml
+
+# Mac
+.DS_Store
